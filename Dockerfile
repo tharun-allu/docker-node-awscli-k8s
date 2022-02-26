@@ -2,10 +2,12 @@ FROM amazonlinux:2
 
 # zip
 RUN yum update -y && \
-curl -sL https://rpm.nodesource.com/setup_16.x | bash - \
-yum -y install nodejs jq openssl tar gzip git && \
+RUN yum -y install jq openssl tar gzip git && \
 yum clean all && \
 rm -rf /var/cache/yum
+
+RUN curl -sL https://rpm.nodesource.com/setup_16.x | bash - 
+RUN yum -y install nodejs
 
 # aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
