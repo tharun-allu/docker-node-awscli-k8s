@@ -25,4 +25,4 @@ jobs:
         with:
           pull: true
           push: true
-          tags: ${{ secrets.DOCKERHUB_USER }}/node-awscli-k8s:16.x
+          tags: ${{ github.workflow }},${{ secrets.DOCKERHUB_USER }}/node-awscli-k8s:latest
