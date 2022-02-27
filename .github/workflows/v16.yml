@@ -1,4 +1,4 @@
-name: ${{ secrets.DOCKERHUB_USER }}/node-awscli-k8s:16.x
+name: tallu/node-awscli-k8s:16.x
 
 on:
   push:
