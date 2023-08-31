@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_docker_node_awscli_k8s_1693451261399-push-trigger-input-set
+  identifier: Build_docker_node_awscli_k8s_1693451261399pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_docker_node_awscli_k8s_1693451261399
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
