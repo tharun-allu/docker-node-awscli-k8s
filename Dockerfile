@@ -22,6 +22,7 @@ chmod 700 ./kubectl && mv kubectl /usr/local/bin
 # helm-ssm a nice utility to inject ssm parameters into helm values files
 RUN git clone https://github.com/romeritoCL/helm-ssm && \
 cd helm-ssm && git checkout patch-1 && helm plugin install ./ && cd - 
+RUN sh -c "$(curl -sSL https://git.io/install-kubent)"
 
 
 CMD ["node"]
